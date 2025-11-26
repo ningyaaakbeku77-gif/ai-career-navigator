@@ -1,11 +1,11 @@
-# AI Career Navigator - Complete Project Guide
+# EvolvPath - Complete Project Guide
 
 ## 🎉 Project Overview
 
-**AI Career Navigator** is a fully functional, production-ready web application that helps students discover personalized learning paths based on real-time job market data and conversational AI assessments.
+**EvolvPath** is a fully functional, production-ready web application that helps students discover personalized learning paths based on real-time job market data and conversational AI assessments.
 
 ### Repository
-🔗 **https://github.com/ningyaaakbeku77-gif/ai-career-navigator**
+🔗 **https://github.com/ningyaaakbeku77-gif/evolvpath**
 
 ---
 
@@ -93,7 +93,7 @@
 ## 📁 Project Structure
 
 ```
-ai-career-navigator/
+evolvpath/
 ├── frontend/                      # React TypeScript application
 │   ├── src/
 │   │   ├── components/
@@ -158,8 +158,8 @@ ai-career-navigator/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/ningyaaakbeku77-gif/ai-career-navigator.git
-cd ai-career-navigator
+git clone https://github.com/ningyaaakbeku77-gif/evolvpath.git
+cd evolvpath
 ```
 
 ### 2. Environment Setup
@@ -451,8 +451,8 @@ MIT License - see LICENSE file for details
 
 ## 👥 Contact & Support
 
-- **Repository:** https://github.com/ningyaaakbeku77-gif/ai-career-navigator
-- **Issues:** https://github.com/ningyaaakbeku77-gif/ai-career-navigator/issues
+- **Repository:** https://github.com/ningyaaakbeku77-gif/evolvpath
+- **Issues:** https://github.com/ningyaaakbeku77-gif/evolvpath/issues
 
 ---
 
