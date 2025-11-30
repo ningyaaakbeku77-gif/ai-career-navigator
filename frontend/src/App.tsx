@@ -33,9 +33,9 @@ function AppContent() {
   const { user, logout, isAuthenticated } = useAuth();
 
   return (
-    <div className="min-h-screen transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-indigo-900 dark:to-purple-900 transition-colors duration-300">
       {/* Navigation */}
-      <nav className="backdrop-blur-xl border-b sticky top-0 z-50 shadow-lg transition-colors">
+      <nav className="bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700 sticky top-0 z-50 shadow-lg transition-colors">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -43,13 +43,13 @@ function AppContent() {
               className="flex items-center gap-3 cursor-pointer group"
               onClick={() => setCurrentView("home")}
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center text-2xl text-white group-hover:scale-110 transition-transform">
                 <Sparkles size={22} />
               </div>
 
               <div>
-                <h1 className="text-xl font-bold">EvolvPath</h1>
-                <p className="text-xs opacity-70">Evolve Your Career</p>
+                <h1 className="text-xl font-bold text-gray-900 dark:text-white">EvolvPath</h1>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Evolve Your Career</p>
               </div>
             </div>
 
@@ -90,7 +90,7 @@ function AppContent() {
               {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+                className="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white transition-colors"
                 title="Toggle theme"
               >
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
@@ -100,13 +100,13 @@ function AppContent() {
               {isAuthenticated ? (
                 <div className="flex items-center gap-3">
                   <div className="px-4 py-2 rounded-xl bg-gray-100 dark:bg-gray-800">
-                    <span className="text-sm font-medium flex items-center gap-2">
+                    <span className="text-sm font-medium flex items-center gap-2 text-gray-900 dark:text-white">
                       <User size={16} /> {user?.name}
                     </span>
                   </div>
                   <button
                     onClick={logout}
-                    className="px-4 py-2 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
+                    className="px-4 py-2 rounded-xl font-semibold text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors flex items-center gap-2"
                   >
                     <LogOut size={16} /> Logout
                   </button>
@@ -128,11 +128,11 @@ function AppContent() {
       <div className="py-8">
         {!isAuthenticated && currentView !== "home" ? (
           <div className="max-w-2xl mx-auto text-center py-20 px-8">
-            <div className="text-6xl mb-6">
+            <div className="text-6xl mb-6 text-gray-400 dark:text-gray-600 flex justify-center">
               <User size={60} />
             </div>
-            <h2 className="text-3xl font-bold mb-4">Sign in Required</h2>
-            <p className="text-lg mb-8">Please sign in to access all features</p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Sign in Required</h2>
+            <p className="text-lg mb-8 text-gray-600 dark:text-gray-400">Please sign in to access all features</p>
 
             <button
               onClick={() => setShowAuthModal(true)}
@@ -171,7 +171,7 @@ function NavButton({ active, onClick, icon, label }: any) {
       className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${
         active
           ? "bg-purple-600 text-white"
-          : "hover:bg-gray-200 dark:hover:bg-gray-800"
+          : "text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800"
       }`}
     >
       {icon}
@@ -194,7 +194,7 @@ function HomePage({ setView, onAuthClick }: any) {
           </span>
         </div>
 
-        <h1 className="text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-7xl font-bold mb-6 leading-tight text-gray-900 dark:text-white">
           Your Career,
           <br />
           <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -202,7 +202,7 @@ function HomePage({ setView, onAuthClick }: any) {
           </span>
         </h1>
 
-        <p className="text-2xl mb-12 font-light max-w-3xl mx-auto">
+        <p className="text-2xl mb-12 font-light max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
           AI interviews • Voice coaching • Live job data • Personalized roadmaps
         </p>
 
@@ -218,7 +218,7 @@ function HomePage({ setView, onAuthClick }: any) {
 
               <button
                 onClick={() => setView("jobs")}
-                className="px-8 py-4 border-2 rounded-xl font-semibold text-lg hover:scale-105 transition-all"
+                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white bg-white dark:bg-slate-800 rounded-xl font-semibold text-lg hover:scale-105 transition-all flex items-center gap-2"
               >
                 <Search size={20} /> Find Jobs
               </button>
@@ -282,22 +282,22 @@ function FeatureCard({ onClick, gradient, icon, title, description, stats }: any
   return (
     <div
       onClick={onClick}
-      className="group relative cursor-pointer rounded-3xl p-6 border hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+      className="group relative cursor-pointer rounded-3xl p-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl"
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-10 group-hover:opacity-20 transition-opacity rounded-3xl`} />
 
       <div className="relative z-10">
         <div
-          className={`w-14 h-14 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform`}
+          className={`w-14 h-14 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center text-white text-3xl mb-4 group-hover:scale-110 transition-transform`}
         >
           {icon}
         </div>
 
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-sm mb-4">{description}</p>
+        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{title}</h3>
+        <p className="text-sm mb-4 text-gray-600 dark:text-gray-400">{description}</p>
 
         <div
-          className={`inline-block px-3 py-1 bg-gradient-to-r ${gradient} bg-opacity-20 rounded-lg text-xs font-semibold`}
+          className={`inline-block px-3 py-1 bg-gradient-to-r ${gradient} bg-opacity-20 rounded-lg text-xs font-semibold text-gray-900 dark:text-white`}
         >
           {stats}
         </div>
