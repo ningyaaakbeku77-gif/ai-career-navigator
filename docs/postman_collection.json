@@ -1,0 +1,44 @@
+{
+ "info": {
+   "_postman_id": "xxxx-xxxx-xxxx-xxxx",
+   "name": "EvolvPath - Core API",
+   "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+ },
+ "item": [
+   {
+     "name": "User Register",
+     "request": {
+       "method": "POST",
+       "header": [{ "key": "Content-Type", "value": "application/json" }],
+       "body": { "mode": "raw", "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\",\n  \"name\": \"Test User\"\n}" },
+       "url": { "raw": "http://localhost:8000/api/auth/register", "protocol": "http", "host": [ "localhost" ], "port": "8000", "path": [ "api", "auth", "register" ] }
+     }
+   },
+   {
+     "name": "User Login",
+     "request": {
+       "method": "POST",
+       "header": [{ "key": "Content-Type", "value": "application/json" }],
+       "body": { "mode": "raw", "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}" },
+       "url": { "raw": "http://localhost:8000/api/auth/login", "protocol": "http", "host": [ "localhost" ], "port": "8000", "path": [ "api", "auth", "login" ] }
+     }
+   },
+   {
+     "name": "Assessment Message (AI Interview)",
+     "request": {
+       "method": "POST",
+       "header": [{ "key": "Content-Type", "value": "application/json" }],
+       "body": { "mode": "raw", "raw": "{\n  \"message\": \"Supervised learning finds patterns in labeled data.\",\n  \"session_id\": \"interview-session\"\n}" },
+       "url": { "raw": "http://localhost:8000/api/assessment/message", "protocol": "http", "host": [ "localhost" ], "port": "8000", "path": [ "api", "assessment", "message" ] }
+     }
+   },
+   {
+     "name": "Job Search",
+     "request": {
+       "method": "GET",
+       "header": [],
+       "url": { "raw": "http://localhost:8000/api/jobs/search?query=python", "protocol": "http", "host": [ "localhost" ], "port": "8000", "path": [ "api", "jobs", "search" ], "query": [ { "key": "query", "value": "python" } ] }
+     }
+   }
+ ]
+}
