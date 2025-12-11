@@ -1,4 +1,4 @@
-# AI Career Navigator
+# EvolvPath
 
 AI-powered career navigation platform with real-time job market intelligence, conversational assessments, and personalized learning paths
 
@@ -9,7 +9,7 @@ AI-powered career navigation platform with real-time job market intelligence, co
 
 ## 📋 Project Overview
 
-AI Career Navigator (EvolvPath) is an intelligent career guidance platform that leverages AI to provide:
+EvolvPath is an intelligent career guidance platform that leverages AI to provide:
 - 🎯 **Conversational AI Assessments** - Natural language-based career skill evaluation
 - 📊 **Real-time Job Market Intelligence** - Live job data scraping and analysis
 - 🎓 **Personalized Learning Roadmaps** - Custom skill development paths
