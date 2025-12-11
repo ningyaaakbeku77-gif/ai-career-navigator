@@ -52,7 +52,7 @@ async def search_jobs(query: str = ''):
                 'title': 'Machine Learning Engineer',
                 'company': 'Tech Corp',
                 'location': 'Remote',
-                'salary': '\ - \',
+                'salary': "-",
                 'skills': ['Python', 'TensorFlow', 'ML'],
                 'posted': '2 days ago',
                 'remote': True
